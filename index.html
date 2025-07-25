@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive flower project by html css / tailwin css for programing hero</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awsome cdn file -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwin css cdn file -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+    }
+    #main{
+        width: 90%;
+        margin: auto;
+        padding-top: 2rem;
+    }
+    /* nav bar code start */
+    nav{
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr ;
+        align-items: center;
+
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav ul li{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+    .listColor{
+        color: rgb(82, 82, 80);
+    }
+    /* header section start */
+    header{
+        margin-top: 3rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: end;
+    }
+    .headerDiv h1{
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    .headerDiv h1 span{
+        color: #E95A08;
+    }
+    .headerDiv p , .textSlice{
+        color: #4d4c4c;
+    }
+   
+
+    /* our plants */
+    #ourPlants{
+        margin-top: 5rem;
+        text-align: center;
+    }
+    #ourPlants p{
+        width: 70%;
+        margin: auto;
+    }
+    .headingPlants {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    .headingPlants span{
+        color: #E95A08;
+    }
+
+    .plastsCard{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 2rem;
+    }
+    .card{
+        overflow: hidden;
+    }
+    .cardImg{
+        transition: transform .3s ease;
+        width: 100%;
+    }
+    .btn{
+        width: 100%;
+        background-color: #E95A08;
+        color: white;
+        padding: .6rem 1rem;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+    .btn:hover{
+        background-color: #ad4407;
+    }
+    .card:hover .cardImg{
+       
+        transform: scale(1.4);
+    }
+
+
+/* Flower & Plants Lover  */
+#plantsLover{
+    margin-top: 9rem;
+    column-gap: 5rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);    
+}
+.imgTrusted{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+.imgTrusted .img2{
+    width: 200px;
+    position: absolute;
+    top: -50px;
+    right: -16%;
+    transform: rotate(0deg);
+    animation: animation 200s;
+}
+@keyframes animation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(4000deg);
+    }
+}
+.img1{
+    width: 100%;
+    height: 100%;
+}
+.disLove h3{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: normal;
+    font-family: sans-serif;
+}
+
+.disLove ul li{
+    list-style: disc;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: rgb(98, 98, 102);
+}
+
+/* latest deals */
+#latestDeals{
+    text-align: center;
+    
+}
+#latestDeals h3{
+    margin: 6rem 0rem 0rem 0rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+#latestDeals h3 span{
+    color: #E95A08;
+}
+ .gallery{
+    margin-top: 4rem;
+}
+ .dis{
+    position: absolute;
+    top: 0;
+    background-color: #1f1e1e7e;
+ }
+
+ /* colorfulBransh */
+ #colorfulBransh{
+    width: 100%;
+    height: 50vh;
+    margin-top: 10rem;
+    background: url( ./assets/news-letter-bg.png);
+    background-repeat: no-repeat;
+ }
+ .colorfulFirst{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    row-gap: 1rem;
+}
+#colorfulBransh div h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+}
+ /* colorfulInput */
+  .colorfulInput{
+    width: 43%; 
+    height: 0%;
+    align-items: center;
+    display: grid;
+    margin: 0rem auto;
+    grid-template-columns: 2fr 1fr;
+ }
+ .colorfulInput input{
+    padding: .4rem ;
+    
+ }
+ 
+ .colorfulInput button{
+    padding: .4rem .9rem;
+    margin-left: .4rem;
+ }
+ /* footer section */
+ footer{
+    width: 90%;
+    margin:2rem auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 4rem;
+    padding-bottom: 1rem;
+ }
+ .fotterUl{
+    display: flex;
+    justify-content: space-around;
+ }
+ .fotterUl ul li{
+    cursor: pointer;
+ }
+ .colorFooter{
+    color: #747373;
+ }
+
+
+ /* media query  */
+ @media(max-width:900px){
+    /* nav bar code start */
+    nav{
+        grid-template-columns: 1fr 1fr ;
+    }
+    .headerDiv h1{
+        font-size: 3rem;
+    }
+    /* Flower & Plants Lover  */
+#plantsLover{
+    margin-top: 6rem;
+    column-gap: 2rem;  
+    align-items: normal;
+}
+
+.imgTrusted .img2{
+    width: 160px;
+    top: -50px;
+    right: -1.4%
+}
+.img1{
+    width: 90%;
+    height: 76%;
+    object-fit: cover;
+    
+}
+.disLove h3{
+    font-size: 2.2rem;
+}
+.disLove ul li{
+    font-size: 1rem;
+}
+
+
+
+ }
+
+ @media(max-width:750px){
+     .plastsCard{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+     /* footer section */
+ footer{
+    column-gap: 0rem;
+ }
+ }
+
+
+ @media (max-width:40rem) { 
+    .smNone{
+        display: none;
+    }
+    nav ul{
+        display: flex;
+        justify-content: end;
+    }
+
+    /* header section */
+     header{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .headerDiv h1{
+        font-size: 2rem;
+    }
+
+
+    /* our plants  */
+    #ourPlants p ,.textSlice{
+        width: 90%;
+    }
+
+    .plastsCard{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+    }
+
+    /* love plants */
+    #plantsLover{
+    margin-top: 3rem;
+    row-gap: 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1,1fr);    
+    }
+    .imgTrusted .img2{
+        display: none;
+    }
+    .gallery{
+        display: flex;
+        flex-direction: column;
+    }
+    .img1{
+        width: 100%;
+        height: 100%;
+    }
+
+ /* colorfulInput */
+ #colorfulBransh{
+    height: 300px;
+    margin-top: 1rem;
+
+ }
+
+ .colorfulInput{
+    width: 80%;
+    margin: 0px auto;
+ }
+ .colorfulInput input{
+    padding: .4rem ;
+ }
+ .colorfulInput button{
+    margin: 0;
+ }
+
+/* footer section */
+ footer{
+    width: 90%;
+    margin:2rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    padding-bottom: 1rem;
+ }
+ .fotterUl{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    row-gap: 1rem;
+ }
+ .fotterUl ul li{
+    cursor: pointer;
+ }
+.icon{
+    width: 50%;
+    justify-content: start;
+}
+
+
+
+  }
+
+
+
+
+
+</style>
+<body>
+
+    <main id="main" class="">
+        <!-- nav bar code start -->
+         <nav class="">
+            <img class="" src="assets/logo.png" alt="">
+            <ul class="">
+                <li class="smNone">Home</li>
+                <li class="smNone" class="listColor">Shop</li>
+                <li class="smNone" class="listColor">About us</li>
+                <li><i class="fa-solid fa-cart-shopping"></i><span>Cart ($56)</span></li>
+            </ul>
+         </nav>
+
+         <!-- header section  -->
+          <header class="w-full ">
+            <div class="headerDiv">
+                <h1>ALWAYS <span>FRESH <br> FLOWERS</span> </h1>
+                <p>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion. </p>
+            </div>
+            <img src="assets/hero-flower.png" alt="">
+          </header>
+
+          <!-- our plants -->
+           <section id="ourPlants">
+            <h3 class="headingPlants">Our <span>Plants</span> </h3>
+            <p>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</p>
+            <div class="plastsCard">
+                <div class="card  rounded-xl">
+                    <img class="rounded cardImg" src="assets/sample-flower-image.png" alt="">
+                    <h3 class="text-xl text-red-400">Lily Blossom</h3>
+                    <p><b>20 USD</b></p>
+                    <button class="btn">ADD TO CART</button>
+                </div>
+                <div class="card  rounded-xl">
+                    <img class="rounded cardImg" src="assets/sample-flower-image.png" alt="">
+                    <h3 class="text-xl text-red-400">Lily Blossom</h3>
+                    <p><b>20 USD</b></p>
+                    <button class="btn">ADD TO CART</button>
+                </div>
+                <div class="card  rounded-xl">
+                    <img class="rounded cardImg" src="assets/sample-flower-image.png" alt="">
+                    <h3 class="text-xl text-red-400">Lily Blossom</h3>
+                    <p><b>20 USD</b></p>
+                    <button class="btn">ADD TO CART</button>
+                </div>
+                <div class="card  rounded-xl">
+                    <img class="rounded cardImg" src="assets/sample-flower-image.png" alt="">
+                    <h3 class="text-xl text-red-400">Lily Blossom</h3>
+                    <p><b>20 USD</b></p>
+                    <button class="btn">ADD TO CART</button>
+                </div>
+                <div class="card  rounded-xl">
+                    <img class="rounded cardImg" src="assets/sample-flower-image.png" alt="">
+                    <h3 class="text-xl text-red-400">Lily Blossom</h3>
+                    <p><b>20 USD</b></p>
+                    <button class="btn">ADD TO CART</button>
+                </div>
+                <div class="card  rounded-xl">
+                    <img class="rounded cardImg" src="assets/sample-flower-image.png" alt="">
+                    <h3 class="text-xl text-red-400">Lily Blossom</h3>
+                    <p><b>20 USD</b></p>
+                    <button class="btn">ADD TO CART</button>
+                </div>
+                <div class="card  rounded-xl">
+                    <img class="rounded cardImg" src="assets/sample-flower-image.png" alt="">
+                    <h3 class="text-xl text-red-400">Lily Blossom</h3>
+                    <p><b>20 USD</b></p>
+                    <button class="btn">ADD TO CART</button>
+                </div>
+                <div class="card  rounded-xl">
+                    <img class="rounded cardImg" src="assets/sample-flower-image.png" alt="">
+                    <h3 class="text-xl text-red-400">Lily Blossom</h3>
+                    <p><b>20 USD</b></p>
+                    <button class="btn">ADD TO CART</button>
+                </div>
+                
+            </div>
+           </section>
+
+
+           <!-- Flower & Plants Lover -->
+            <section id="plantsLover">
+                <div class="imgTrusted">
+                    <img class="img1" src="assets/flower-store.png" alt="">
+                    <img class="img2" src="assets/trusted-badge.png" alt="">
+                </div>
+                <div class="disLove">
+                    <h3 class="">Flower & Plants <br> Lover</h3>
+                    <ul>
+                        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
+                        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
+                        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Latest  Deals  use taiwlin css-->
+             <seciton id="latestDeals">
+                <h3> <span>Latest</span>  Deals</h3>
+                <p class="textSlice">Indulge your senses with the beauty and fragrance of our fresh flower shop. From  classic roses to exotic blooms, we offer a wide variety of fresh.</p>
+
+                <!-- <div class="galery">
+                    <div class="galleryLeft">
+                        <div class="gridCard">
+                            <img src="assets/deal-ana.png" alt="">
+                            <div class="galleryDis">
+                                <p>60% of | Bloom Plant</p>
+                                <a href="">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="gridCard">
+                            <img src="assets/deal-bloom.png" alt="">
+                            <div class="galleryDis">
+                                <p>60% of | Bloom Plant</p>
+                                <a href="">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="galleryRight">
+                        <div class="gridCard">
+                            <img src="assets/deal-zabo.png" alt="">
+                            <div class="galleryDis2">
+                                <p>60% of | Bloom Plant</p>
+                                <a href="">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class=" gallery grid grid-cols-3 md:flex md:flex-row gap-4">
+                    
+                    <div class="grid gap-4 grid-rows-2">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img class="w-full h-full rounded-xl " src="assets/deal-ana.png" alt="">
+                            <div class="dis h-full w-full flex flex-col justify-center items-center bg-[#08080831] text-white">
+                                <p class="text-xl">60% of | Bloom Plant</p>
+                                <a href="">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden rounded-xl ">
+                            <img class="w-full h-full rounded-xl"  src="assets/deal-bloom.png" alt=""> 
+                            <div class="dis h-full w-full flex flex-col justify-center items-center bg-[#0000003a] text-white">
+                                <p class="text-xl">60% of | Bloom Plant</p>
+                                <a href="">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2 relative overflow-hidden rounded-xl">
+                        <img class="w-full h-full rounded-xl" src="assets/deal-zabo.png" alt="">
+                        <div class="dis h-full w-full flex flex-col justify-center items-center bg-[#0000003a] text-white">
+                                <p class="text-2xl">60% of | Bloom Plant</p>
+                                <a href="">Shop Now</a>
+                            </div>
+                    </div>
+
+                    <div>
+                       
+                    
+                    </div>
+                    
+                </div>
+            </seciton>
+             
+    </main>
+
+     <!-- Join the colorful Bunch -->
+             <section id="colorfulBransh" class="text-center">
+
+                <div class="colorfulFirst">
+                    <h1 class="text-center text-4xl  text-white">Join the colorful Bunch</h1>
+                <div class="colorfulInput">
+                    <input class="bg-white rounded " type="text" placeholder="Write email"><button class="bg-[#E95A08] text-white rounded-md">Subscribe</button>
+                </div>
+                </div>
+                
+             </section>
+    
+             <!-- fotter section code -->
+              <footer id="" class="">
+                    <div class="">
+                        <img src="assets/logo.png" alt="">
+                        <p class="colorFooter">Indulge your senses with the beauty and fragrance of our fresh flower shop. </p>
+                    </div>
+                        <div class="fotterUl">
+                            <ul class="flex flex-col gap-y-7 colorFooter">
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Blog</li>
+                            <li>FAQ</li>
+                            <li>Contact Us</li>
+                        </ul>
+                        <ul class="flex flex-col gap-y-7 colorFooter">
+                            <li>Features</li>
+                            <li>Pricing</li>
+                            <li>Privacy Policy</li>Terms of Service</li>
+                            <li>Help Center</li>
+                        </ul>
+                        </div>
+                    
+                    <div class="icon grid grid-cols-4">
+                        <img class="w-8  cursor-pointer" src="./assets/icon-facebook.png" alt="">
+                        <img class="w-8  cursor-pointer" src="./assets/icon-linkedin.png" alt="">
+                        <img class="w-8  cursor-pointer" src="./assets/icon-twitter.png" alt="">
+                        <img class="w-8  cursor-pointer" src="./assets/icon-youtube.png" alt="">
+                    </div>
+              </footer>
+
+              <!-- Copyright -->
+    <div class="text-center text-white bg-black">2022 Copyright:
+      <a class="" 
+         >graphicBox</a
+        >
+    </div>
+</body>
+</html>
